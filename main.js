@@ -4,7 +4,7 @@ import { Navigation, Thumbs } from 'swiper/modules';
 import Swiper from 'swiper';
 import 'swiper/css';
 
-const swiperThumbnails = new Swiper(".product__thumbnails-slide", {
+const swiperThumbnails = new Swiper(".product__slider-thumbnails", {
   loop: true,
   spaceBetween: 10,
   slidesPerView: 4,

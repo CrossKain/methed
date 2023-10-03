@@ -233,7 +233,7 @@
       </div>
     </section>
 
-    <section class="product" hidden>
+    <section class="product">
       <div class="container">
         <h2 class="product__title">Кресло с подлокотниками</h2>
         <div class="product__picture">
@@ -424,30 +424,30 @@
           </div>
           <form action="#" class="cart__form form__order" id="form" method="post">
             <h3 class="cart__subtitle">Данные для доставки</h3>
-            <fieldset class="form-order__fieldset form-order__fieldset_input">
-              <input type="text" class="form-order__input" name="name" placeholder="Фамилия Имя Отчество">
-              <input type="tel" class="form-order__input" name="phone" placeholder="Телефон">
-              <input type="email" class="form-order__input" name="email" placeholder="E-mail">
-              <input type="text" class="form-order__input" name="address" placeholder="Адрес доставки">
-              <textarea class="form-order__textarea" name="comments" placeholder="Комментарий к заказу"></textarea>
+            <fieldset class="form__order-fieldset form-order__fieldset-input">
+              <input type="text" class="form__order-input" name="name" placeholder="Фамилия Имя Отчество">
+              <input type="tel" class="form__order-input" name="phone" placeholder="Телефон">
+              <input type="email" class="form__order-input" name="email" placeholder="E-mail">
+              <input type="text" class="form__order-input" name="address" placeholder="Адрес доставки">
+              <textarea class="form__order-textarea" name="comments" placeholder="Комментарий к заказу"></textarea>
             </fieldset>
-            <fieldset class="form-order__fieldset form-order__fieldset_radio">
+            <fieldset class="form-order__fieldset form-order__fieldset-radio">
               <legend class="form-order__legend">Доставка</legend>
-              <label class="form-order__label radio">
+              <label class="form__order-label radio">
                 <input type="radio" class="radio__input" name="deliveryType" value="delivery">Доставка
               </label>
 
-              <label class="form-order__label radio">
+              <label class="form__order-label radio">
                 <input type="radio" class="radio__input" name="deliveryType" value="pickup">Самовывоз
               </label>
             </fieldset>
-            <fieldset class="form-order__fieldset form-order__fieldset_radio">
-              <legend class="form-order__legend">Оплата</legend>
-              <label class="form-order__label radio">
+            <fieldset class="form__order-fieldset form__order-fieldset-radio">
+              <legend class="form__order-legend">Оплата</legend>
+              <label class="form__order-label radio">
                 <input type="radio" class="radio__input" name="paymentType" value="card">Картой при получении
               </label>
 
-              <label class="form-order__label radio">
+              <label class="form__order-label radio">
                 <input type="radio" class="radio__input" name="paymentType" value="cash">Наличными при получении
               </label>
             </fieldset>
@@ -457,33 +457,42 @@
     </section>
 
     <section class="order">
-      
+
       <div class="order__place-info">
         <div class="order__place">
-        <h3 class="order__place-subtitle">Заказ успешно размещен</h3>
-        <p class="order__place-number">№43435</p>
-        <p class="order__place-price">20&nbsp;000&nbsp;₽</p>
+          <h3 class="order__place-subtitle">Заказ успешно размещен</h3>
+          <p class="order__place-number">№43435</p>
+          <p class="order__place-price">20&nbsp;000&nbsp;₽</p>
         </div>
-        <div class="order__place-data">
-          <p class="oreder__place-data">Получатель</p>
-          <p class="oreder__place-data">Телефон</p>
-          <p class="oreder__place-data">E-mail</p>
-          <p class="oreder__place-data">Адрес доставки</p>
-          <p class="oreder__place-data">Способ оплаты</p>
-          <p class="oreder__place-data">Способ получения</p>
-        </div>
-        <div class="order__place-about">
-          <p class="order__place-main">Иванов Петр Александрович</p>
-          <p class="order__place-main">+7 (737) 346 23 00</p>
-          <p class="order__place-main">Ivanov84@gmail.com</p>
-          <p class="order__place-main">Москва, ул. Ленина, 21, кв. 33</p>
-          <p class="order__place-main">Картой при получении</p>
-          <p class="order__place-main">Доставка</p>
-        </div>
-        
-        <button class="order__place-btn" type="submit" form="order">На главную
-          <a href="#"></a>
-        </button>
+        <table class="order__place-table table">
+          <tr class="order__place-row">
+            <td class="order__place-filed">Получатель</td>
+            <td class="order__place-value">Иванов Петр Александрович</td>
+          </tr>
+          <tr class="order__place-row">
+            <td class="order__place-filed">Телефон</td>
+            <td class="order__place-value">+7 (737) 346 23 00</td>
+          </tr>
+          <tr class="order__place-row">
+            <td class="order__place-filed">E-mail</td>
+            <td class="order__place-value">Ivanov84@gmail.com</td>
+          </tr>
+          <tr class="order__place-row">
+            <td class="order__place-filed">Адрес доставки</td>
+            <td class="order__place-value">Москва, ул. Ленина, 21, кв. 33</td>
+          </tr>
+          <tr class="order__place-row">
+            <td class="order__place-filed">Способ оплаты</td>
+            <td class="order__place-value">Картой при получении</td>
+          </tr>
+          <tr class="order__place-row">
+            <td class="order__place-filed">Способ получения</td>
+            <td class="order__place-value">Доставка</td>
+          </tr>
+
+        </table>
+
+        <button class="order__place-btn" type="submit">На главную</button>
       </div>
 
     </section>
@@ -499,14 +508,14 @@
       </a>
 
       <div class="footer__contacts contacts">
-        <a href="tel:+7 (939) 839 12 97" class="contacts__phone">
+        <a href="tel:+79398391297" class="contacts__phone">
 
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M4.48566 1.54445L5.59251 1.21074C5.95781 1.10078 6.35064 1.12746 6.69772 1.2858C7.0448 1.44415 7.32242 1.72334 7.4788 2.07131L8.2548 3.79703C8.38948 4.09641 8.42702 4.43046 8.36215 4.75227C8.29727 5.07408 8.13324 5.36749 7.89309 5.59131L6.71194 6.69188C6.55366 6.84217 6.67366 7.42788 7.25194 8.43017C7.8308 9.43303 8.27823 9.8296 8.48451 9.76788L10.0319 9.29474C10.3456 9.1988 10.6814 9.20341 10.9923 9.30794C11.3032 9.41246 11.5737 9.61166 11.7657 9.8776L12.8685 11.4062C13.0913 11.7148 13.1944 12.0939 13.1588 12.4728C13.1232 12.8518 12.9512 13.205 12.6748 13.4667L11.8222 14.2742C11.547 14.5348 11.2076 14.7178 10.8385 14.8044C10.4695 14.891 10.0841 14.8782 9.72166 14.7673C7.93537 14.2205 6.28109 12.5976 4.73651 9.9216C3.18851 7.2416 2.60394 4.98103 3.01137 3.13417C3.09355 2.76203 3.27348 2.41853 3.53263 2.1391C3.79177 1.85966 4.12075 1.65439 4.48566 1.54445Z"
               fill="white" />
           </svg>
-          <span>+7 (939) 839 12 97</span>
+          <span>+79398391297</span>
 
         </a>
         <ul class="contacts__list">
