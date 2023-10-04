@@ -1,0 +1,109 @@
+.card {
+    position: relative;
+
+
+
+
+
+
+    &__link {
+        &_img {
+            display: block;
+
+
+
+            margin-bottom: 12px;
+
+            @media(min-width:580px) {
+                margin-bottom: 16px;
+            }
+
+        }
+    }
+
+
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+
+    }
+
+    &__info {
+        @media(min-width:580px) {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+    &__title {
+
+        margin-bottom: 4px;
+        font-size: 12px;
+        font-weight: 400;
+
+        @media(min-width:580px) {
+            margin-bottom: 0;
+            padding-top: 3px;
+
+            font-size: 16px;
+        }
+    }
+
+
+
+    &__price {
+        font-size: 16px;
+
+        @media(min-width:580px) {
+            margin-bottom: 0;
+
+            font-size: 20px;
+        }
+
+        margin-bottom: 12px;
+    }
+
+
+
+    &__btn {
+        width: 100%;
+        padding: 12px 24px;
+        color: #780096;
+        border-radius: 32px;
+        border: 1px solid #780096;
+
+        &:hover,
+        &:focus-visible {
+            border-radius: 32px;
+            border: 1px solid #C0F;
+        }
+
+        &:active,
+        &_active {
+            color: #fff;
+            background-color: #780096;
+
+            &:hover,
+            &:focus-visible {
+
+                color: #fff;
+            }
+
+
+
+        }
+    }
+
+
+
+    &__favotire {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+}
