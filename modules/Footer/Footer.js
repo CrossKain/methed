@@ -58,10 +58,6 @@ export class Footer {
 
     getHTML() {
         return `
-    <div class="container footer__container">
-    <a href="/" class="footer__link-logo">
-        <img src="img/logo.svg" alt="Логотип мебельного маркета Koff" class="footer__logo">
-    </a>
 
     <div class="footer__contacts contacts">
         <a href="tel:+79398391297" class="contacts__phone">
