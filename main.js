@@ -75,7 +75,7 @@ const init = () => {
       console.log('cart')
     })
     .on('/order', () => {
-      console.log('order')
+      new Order().mount(new Main().element);
     })
     .notFound(() => {
       document.body.innerHTML = "<h2>Страница не найдена</h2>";
